@@ -3,6 +3,11 @@
 session_start();
 include_once '../app/configuracoes.php';
 
+if ((isset($_SESSION['id_cliente']))) {
+    header('Location: loja.php');
+    die();
+}
+
 ?>
 
 <!DOCTYPE html>

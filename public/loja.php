@@ -28,9 +28,28 @@ include_once '../app/controlador/Produtos.php';
     <div class=" pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Produtos disponíveis</h1>
     <p class="lead">Escolha os seus produtos</p>
+    <a class="btn btn-primary btn-sm btn-block" href="./carrinho.php">Carrinho</a>
     </div>
 
+
     <div class="container">
+
+    
+    <?php if(isset($_GET["sucess"])){ ?>
+    
+        <div class="alert alert-success" role="alert">
+        Produto adicionado ao carrinho  <a href="./carrinho.php" class="alert-link">Clique aqui</a> para visualizar seu carrinho.
+        </div>
+   <?php }  ?>
+   <?php if(isset($_GET["error"])){ ?>
+    
+    <div class="alert alert-danger" role="alert">
+   Erro ao tentar adicionar item ao carrinho, entre em contato com o administrador!
+    </div>
+<?php }  ?>
+    
+    
+    
         <div class="card-deck mb-3 text-center">
         <?php
         $i = 0;
@@ -60,7 +79,20 @@ include_once '../app/controlador/Produtos.php';
                         <ul class="list-unstyled mt-3 mb-4">
                             <li><?php echo $value->getQuantidade(); ?> disponíveis</li>
                         </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-primary">Adicionar Carrinho</button>
+                        <form action="../app/controlador/AdicionarProduto.php" method="post">
+                           
+                            <input type="hidden" value="<?= $value->getId(); ?> " name="id_produto">
+                            <input type="hidden" value="<?= $_SESSION['id_cliente'];?>" name="id_cliente">
+
+                            <button type="submit" href="../app/controlador/Carrinho.php" class="btn btn-lg btn-block btn-primary" <?= $value->getDisponibilidade(); ?>>
+                                
+                            Adicionar Carrinho
+
+
+                            </button>
+
+
+                        </form>
                     </div>
                 </div>
                 <?php } ?>

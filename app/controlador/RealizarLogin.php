@@ -12,13 +12,10 @@ $login = new LoginApp();
 
 
 if(!($login->verificarLoginUsuario($email,$senha))){
-    echo "OI";
-    die();
     header('Location: '. URL .'public');
 
 }else{
     echo URL .'public/loja.php';
-    die();
-  
+    
     header('Location: '. URL .'public/loja.php');
 }
