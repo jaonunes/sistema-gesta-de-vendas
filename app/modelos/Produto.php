@@ -6,29 +6,10 @@ class Produto{
     private $descricao;
     private $valor;
     private $quantidade;
-    private $flag;
+    private $disponibilidade;
 
    
 
-    /**
-     * Get the value of flag
-     */ 
-    public function getFlag()
-    {
-        return $this->flag;
-    }
-
-    /**
-     * Set the value of flag
-     *
-     * @return  self
-     */ 
-    public function setFlag($flag)
-    {
-        $this->flag = $flag;
-
-        return $this;
-    }
 
     /**
      * Get the value of id
@@ -106,6 +87,26 @@ class Produto{
     public function setQuantidade($quantidade)
     {
         $this->quantidade = $quantidade;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of disponibilidade
+     */ 
+    public function getDisponibilidade()
+    {
+        return $this->disponibilidade;
+    }
+
+    /**
+     * Set the value of disponibilidade
+     *
+     * @return  self
+     */ 
+    public function setDisponibilidade($disponibilidade)
+    {
+        $this->disponibilidade = $disponibilidade;
 
         return $this;
     }

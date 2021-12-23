@@ -32,7 +32,7 @@ class LoginApp{
                 $_SESSION["id_cliente"] = $row["id_cliente"];
                 $_SESSION["cep_cliente"] = $row["cep_cliente"];
 
-                var_dump(  $_SESSION);
+                
                 
                 return true;
             }
