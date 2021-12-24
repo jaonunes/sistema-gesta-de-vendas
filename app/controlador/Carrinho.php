@@ -15,7 +15,7 @@ if(isset($_POST["atualizarQuantidade"])){
         if($produtoApp->verificarQuantidadeProduto($id_produto) > 0){
             $carrinhoApp->inserirItemCarrinho( $id_produto, $id_carrinho);
             $atualizarQuantidade = $produtoApp->alterarQuantidadeProduto( $id_produto, -1);
-            $msgerro = "Não há mais itens disponível";
+            
         }
         
     }
