@@ -7,13 +7,19 @@
 
 O objeito desse projeto é gerir as vendas de determinados produtos, cuidando sempre da confiabilidade do estoque.
 
-### Features
+### Ações
 
 - [x] realizar login
 - [x] excluir produtos do carrinho;
 - [x] adicionar produtos ao carrinho; 
 - [x] finalizar a compra;
 - [x] cancelar toda a compra;
+
+### Utilização
+
+- Após instalar as tecnologias necessárias (Bootstrap e JQuery estão inclusos via CDN), acesse  localhost:8080/sistema-gesta-de-vendas/public/
+- Realize login user: teste@teste.com Senha: 778899
+- Pronto, agora é só finalizar adicionar produtos e finalizar compra. 
 
 ### 🛠 Tecnologias
 
