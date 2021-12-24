@@ -28,3 +28,4 @@ O objeito desse projeto é gerir as vendas de determinados produtos, cuidando se
 - [JQuery 3.1](https://jquery.com/download/)
 - [DB 10.4.19-MariaDB ](#)
 - [Apache/2.4.47](https://httpd.apache.org/download.cgi)
+- [Arquitetura MVC](#)
